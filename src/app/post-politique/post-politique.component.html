@@ -1,0 +1,13 @@
+<h2> Politique </h2>
+<ul class="collection">
+
+    <app-post-list-item *ngFor="let post of politiquePosts; let i = index"
+    [index]="post.id"
+    [title]="post.title" 
+    [content]="post.content" 
+    [loveIt]="post.loveIt" 
+    [donotloveIt]="post.donotloveIt" 
+    [categorie]="post.categorie" 
+    [image]="post.image" 
+    [created_at]="post.created_at"></app-post-list-item>
+</ul>

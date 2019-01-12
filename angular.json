@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/materialize/css/materialize.min.css",
+              "src/assets/css/lesFonts.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/materialize/js/materialize.min.js",
+              "src/assets/jquery/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

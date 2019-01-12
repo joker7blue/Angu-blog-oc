@@ -1,0 +1,10 @@
+.parallax-container{
+
+    height: 300px;
+}
+
+.parallax-container img{
+
+    width: 100%;
+    height: 100%;
+}

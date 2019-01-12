@@ -1,0 +1,40 @@
+<li class="collection-item" [ngClass]="{'green lighten-5': loveIt >donotloveIt, 'red lighten-4': donotloveIt > loveIt}" >
+    <div class="row">
+      <div class="col l3">
+          <img class="materialboxed responsive-img" [src]="image">
+      </div>
+      <div class="col l9">
+        <div class="header-post">
+            <span style="font-size: 1.5em; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">{{ title }}
+                    </span>
+            <span style="font-size: 1.5em;" class="right">{{ created_at | date }}</span>
+        </div>
+
+        <br>
+        <div class="content-post" style="font-size: 1.2em;">
+            {{ content }}
+        </div>
+        
+        <br>
+        <div class="content-post" style="font-size: 1.2em;">
+            <!-- <button class="waves-effect light-blue btn-small" onclick="M.toast({html: 'Vous aimez ce post'})" (click)="love(i+1)">J'aime ({{loveIt}})</button>&nbsp;
+            <button class="waves-effect red lighten-1 btn-small" onclick="M.toast({html: 'Vous n\'aimez pas ce post'})" (click)="donotlove(i+1)">J'aime pas ({{donotloveIt}})</button> -->
+        </div>
+
+        <div>
+          <span class="blue-text iconLove"  (click)="love(index)"><i class="material-icons small">sentiment_very_satisfied
+                
+                </i> {{loveIt}}</span>
+            &nbsp;&nbsp;
+            <span class="red-text iconLove" (click)="donotlove(index)"><i class="material-icons small">sentiment_very_dissatisfied
+                        
+                </i> {{donotloveIt}}</span>
+
+            &nbsp;&nbsp;
+            <a [routerLink]="['/', categorie, index]"><i class="material-icons small">visibility
+                        
+                </i> voir </a>
+        </div>
+      </div>
+    </div>
+  </li>

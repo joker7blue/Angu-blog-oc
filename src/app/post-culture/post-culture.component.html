@@ -1,0 +1,16 @@
+<h2> Culture </h2>
+<ul class="collection">
+
+    <app-post-list-item *ngFor="let post of culturePosts; let i = index"
+    [index]="i"
+    [title]="post.title" 
+    [content]="post.content" 
+    [loveIt]="post.loveIt" 
+    [donotloveIt]="post.donotloveIt" 
+    [categorie]="post.categorie" 
+    [image]="post.image" 
+    [created_at]="post.created_at"></app-post-list-item>
+
+</ul>
+
+<h2 *ngIf="0 >= tailleAllCulturePost"> Aucune info pour le moment </h2>

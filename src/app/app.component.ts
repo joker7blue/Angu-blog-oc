@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PostService } from './services/post-service.service';
+import { AppService } from './services/app-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'final1';
+  title = 'Fil-Info44';
+  isAuth = false;
+
+  constructor(private postService: PostService, private appService: AppService){
+  }
+
+  login(){
+
+    this.appService.login();
+    this.isAuth = this.appService.isAuth;
+  }
 }
